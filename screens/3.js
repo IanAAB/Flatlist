@@ -1,65 +1,80 @@
 import React from 'react';
-import { View, Text, FlatList, Button, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 
-const pacientesAgendados = [
+const footballPlayers = [
   {
     id: 1,
-    nome: 'Ian A.',
-    cpf: '123.456.789-01',
-    dataNascimento: '03/08/2006',
-    endereco: 'Rua Murilo Romeiro, 967',
-    valorConsulta: 100,
+    name: "Cristiano Ronaldo",
+    position: "Forward",
+    age: 36,
   },
   {
     id: 2,
-    nome: 'Lucas K',
-    cpf: '123.456.789-01',
-    dataNascimento: '01/09/2005',
-    endereco: 'Rua Bruno Bandeira, 286',
-    valorConsulta: 100,
+    name: "Lionel Messi",
+    position: "Attacking Midfielder",
+    age: 34,
   },
   {
     id: 3,
-    nome: 'Daniel S.',
-    cpf: '123.456.789-01',
-    dataNascimento: '22/02/2006',
-    endereco: 'Rua B, 243',
-    valorConsulta: 100,
+    name: "Neymar Jr.",
+    position: "Forward",
+    age: 29,
   },
   {
     id: 4,
-    nome: 'Emilio F.',
-    cpf: '123.456.789-01',
-    dataNascimento: '012/06/2004',
-    endereco: 'Rua C, 498',
-    valorConsulta: 100,
+    name: "Kylian Mbappé",
+    position: "Forward",
+    age: 23,
   },
   {
     id: 5,
-    nome: 'Tiago M.',
-    cpf: '123.456.789-01',
-    dataNascimento: '05/01/2005',
-    endereco: 'Rua D, 467',
-    valorConsulta: 100,
+    name: "Sergio Ramos",
+    position: "Defender",
+    age: 35,
   },
-
+  {
+    id: 6,
+    name: "Kevin De Bruyne",
+    position: "Midfielder",
+    age: 30,
+  },
+  {
+    id: 7,
+    name: "Robert Lewandowski",
+    position: "Forward",
+    age: 32,
+  },
+  {
+    id: 8,
+    name: "Virgil van Dijk",
+    position: "Defender",
+    age: 30,
+  },
+  {
+    id: 9,
+    name: "Luka Modric",
+    position: "Midfielder",
+    age: 35,
+  },
+  {
+    id: 10,
+    name: "Erling Haaland",
+    position: "Forward",
+    age: 21,
+  }
 ];
 
-function Consulta({ navigation }) {
+function screen3() {
   return (
-    <View style={StyleSheet.container}>
+    <View style={styles.container}>
       <FlatList
-        data={pacientesAgendados}
+        data={footballPlayers}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View>
-            <Text>Nome: {item.nome}</Text>
-            <Text>CPF: {item.cpf}</Text>
-            <Text>Data de Nascimento: {item.dataNascimento}</Text>
-            <Text>Endereço: {item.endereco}</Text>
-            <Text>Valor da Consulta: R${item.valorConsulta.toFixed(2)}</Text>
-            {}
-        
+            <Text>Name: {item.name}</Text>
+            <Text>Position: {item.position}</Text>
+            <Text>Age: {item.age}</Text>
           </View>
         )}
       />
@@ -74,4 +89,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   }
 });
-export default Consulta;
+export default screen3;

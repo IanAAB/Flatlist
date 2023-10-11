@@ -1,46 +1,44 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, StyleSheet } from 'react-native';
+import { View, TextInput, Button, StyleSheet, ImageBackground } from 'react-native';
 
-function Agendamento() {
-  const [nome, setNome] = useState('');
-  const [cpf, setCpf] = useState('');
-  const [dataNascimento, setDataNascimento] = useState('');
-  const [endereco, setEndereco] = useState('');
+function screen2() {
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [country, setCountry] = useState('');
+  const [experience, setExperience] = useState('');
 
-  const agendarConsulta = () => {
-    const dadosPaciente = {
-      nome,
-      cpf,
-      dataNascimento,
-      endereco,
+  const cadastrarTécnico = () => {
+    const dadosTécnico = {
+      name,
+      age,
+      country,
+      experience,
     };
-
-    console.log('Dados do Paciente:', dadosPaciente);
+    console.log('Dados do Técnico:', dadosTécnico);
   };
-
   return (
     <View style={styles.container}>
       <TextInput
-        placeholder="Nome Completo"
-        value={nome}
-        onChangeText={setNome}
+        placeholder="Name"
+        value={name}
+        onChangeText={setName}
         style={styles.inp1}
       />
       <TextInput 
-      placeholder="CPF" 
-      value={cpf} onChangeText={setCpf} 
+      placeholder="Age" 
+      value={age} onChangeText={setAge} 
       style={styles.inp2}/>
       <TextInput
-        placeholder="Data de Nascimento"
-        value={dataNascimento}
-        onChangeText={setDataNascimento}
+        placeholder="Place of birth"
+        value={country}
+        onChangeText={setCountry}
         style={styles.inp3}
       />
-      <TextInput placeholder="Endereço" 
-      value={endereco} 
-      onChangeText={setEndereco} 
+      <TextInput placeholder="Years of experience " 
+      value={experience} 
+      onChangeText={setExperience} 
       style={styles.inp4}/>
-      <Button title="Agendar" onPress={agendarConsulta} color="#6495ED"
+      <Button title="Register" onPress={cadastrarTécnico} color="#6495ED"
       />
     </View>
   );
@@ -71,7 +69,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     height: 50,
     backgroundColor: "#A9A9A9"
-  },
+  } 
 });
 
-export default Agendamento;
+export default screen2;

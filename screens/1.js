@@ -1,17 +1,17 @@
 import React from 'react';
 import { View, Button, StyleSheet } from 'react-native';
 
-function Home({ navigation }) {
+function screen1({ navigation }) {
   return (
     <View style={styles.container}>
       <Button
-        title="Agendar Consulta"
+        title="Register Manager"
         onPress={() => navigation.navigate('2')}
         color="#6495ED"
         style={styles.button}
       />
       <Button
-        title="Consultar Pacientes Agendados"
+        title="Registered Players"
         onPress={() => navigation.navigate('3')}
         color="#6495ED"
 
@@ -33,4 +33,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default screen1;
